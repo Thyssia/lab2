@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/viewtext1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I love Android"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/flag"
+        tools:layout_editor_absoluteX="190dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <Switch
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch on/off"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="61dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Press Me"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="129dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check this out!"
+        tools:layout_editor_absoluteX="230dp"
+        tools:layout_editor_absoluteY="139dp" />
+
+    <EditText
+        android:id="@+id/edittext1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="I love Android"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="190dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

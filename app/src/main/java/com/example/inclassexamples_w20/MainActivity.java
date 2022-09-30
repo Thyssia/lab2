@@ -25,26 +25,33 @@ public class MainActivity extends AppCompatActivity {
 
         //Now that the screen was loaded, use findViewByid() to
         // get load the objects in Java:
-        TextView firstText = findViewById(R.id.firstText);
+        TextView firstText = findViewById(R.id.viewtext1);
 
-        EditText theEdit = findViewById(R.id.firstEditText);
+        EditText theEdit = findViewById(R.id.edittext1);
+        CheckBox firstCheck = findViewById(R.id.checkBox2);
 
-        String message = getResources().getString(R.string.hello);
-        theEdit.setText(message);
+        final Button btn = findViewById(R.id.button3);
+        btn.setOnClickListener( (click) -> {
+            firstText.setText(theEdit.getText());
+            Toast.makeText(MainActivity.this, getResources().getString(R.string.toast_message), Toast.LENGTH_LONG).show();
+        });
 
-        final Button btn = findViewById(R.id.myButton);
-        btn.setText("New strings");
-        btn.setOnClickListener( (click) ->  { btn.setText("You clicked me"); }  );
+        firstCheck.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
+            @Override
+            public void onCheckedChanged(CompoundButton firstCheck, boolean b) {
+                String message = getResources().getString(R.string.snack_bar) +" ";
+                message += b ? getResources().getString(R.string.on) : getResources().getString(R.string.off);
 
-        CheckBox cb = findViewById(R.id.checkb);
-        cb.setOnCheckedChangeListener( (compoundButton, b) -> {
+                Snackbar.make(firstCheck, message, Snackbar.LENGTH_LONG)
+                        .setAction("Undo", new View.OnClickListener() {
 
-          //  Toast.makeText(MainActivity.this, "Checkbox is " + b, Toast.LENGTH_LONG).show();
-            Snackbar.make(theEdit, "Checkbox is " + b, Snackbar.LENGTH_LONG)
-                    .setAction("Undo", click-> compoundButton.setChecked( !b ))
-                    .show();
-
+                            @Override
+                            public void onClick(View v) {
+                                firstCheck.setChecked(!firstCheck.isChecked());
+                            }
+                        }).show();
+            }
         });
     }
 }

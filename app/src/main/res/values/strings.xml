@@ -12,4 +12,11 @@
     <string name="item5">5</string>
     <string name="item6">6</string>
     <string name="item7">7</string>
+    <string name="toast_message">Label has been updated</string>
+    <string name="snack_bar">The checkbox is now </string>
+    <string name="on">on</string>
+    <string name="off">off</string>
+
+
+
 </resources>
